@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WpfApplication5.Start"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1100">
+
+    <Grid Background="#FF232323" Margin="0,0,0,0">
+
+        <TextBlock TextWrapping="Wrap" Text="BREW &amp; BLENDZ MENU" Margin="129,351,149,78" FontSize="85" FontFamily="Microsoft Yi Baiti" FontWeight="ExtraLight" Foreground="#FFFDEAF6" FontStretch="SemiExpanded"/>
+        <TextBlock TextWrapping="Wrap" Text="—  tap the screen to start  —" Margin="372,474,308,241" FontSize="28" FontFamily="Britannic Bold" Foreground="#FFF1E8E8"/>
+
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Width="1100" Height="800" FontSize="20" Click="Button_Click_1" Opacity="0.1" Foreground="#FF2C2A2A" Background="#FFF1E8E8" BorderBrush="#FFBDB9B9"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="185,246,0,0" VerticalAlignment="Top" Width="100" Source="Food&amp;Drink (110) copy.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="497,246,0,0" VerticalAlignment="Top" Width="100" Source="Food&amp;Drink (112) copy.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="783,246,0,0" VerticalAlignment="Top" Width="100" Source="Food&amp;Drink (64) copy.png"/>
+
+
+    </Grid>
+</UserControl>

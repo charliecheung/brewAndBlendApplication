@@ -1,0 +1,703 @@
+﻿<UserControl x:Class="WpfApplication5.Menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1100">
+
+    <Grid Background="#FFF1F1F1">
+        <Label Content="ORDER" HorizontalAlignment="Left" Margin="760,0,0,0" VerticalAlignment="Top" Height="70" Width="340" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF333739" Foreground="#FFEEE5E5" FontFamily="Microsoft Yi Baiti"/>
+        <Grid Margin="0,-10,0,10">
+            <Button Background="Transparent" HorizontalAlignment="Left" Margin="772,700,0,0" VerticalAlignment="Top" Width="151" Height="61" Click="Button_Click">
+                <Image Name="cancelButton" Stretch="Fill" Source="cancelButton.jpg" Height="51" Width="141"/>
+            </Button>
+        </Grid>
+
+        <Grid Margin="0,-10,0,10">
+            <Button Background="Transparent" HorizontalAlignment="Left" Margin="934,700,0,0" VerticalAlignment="Top" Width="142" Height="61" Click="Checkout_Click">
+                <Image Name="checkoutButton" Stretch="Fill" Source="checkoutButton.jpg" Height="51" Width="134"/>
+            </Button>
+        </Grid>
+
+        <Grid Margin="0,-10,0,10">
+            <Button Background="Transparent" HorizontalAlignment="Left" Margin="1034,10,0,0" VerticalAlignment="Top" Width="56" Height="66" Click="Button_Click_bell">
+                <Image Name="bellButton" Stretch="Fill" Source="bell copy.png" Height="60" Width="46"/>
+            </Button>
+        </Grid>
+
+        <Grid Height="25" Margin="760,66,0,0" VerticalAlignment="Top" Background="#FF232527">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="13*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="69"/>
+                <ColumnDefinition Width="45"/>
+            </Grid.ColumnDefinitions>
+            <Label Width="Auto" Height="Auto" Grid.Column="0" Content="Item" Grid.RowSpan="2" Foreground="#FFF5EDED" FontFamily="Microsoft Yi Baiti" FontSize="15"/>
+            <Label Width="Auto" Height="Auto"  Grid.Column="1" Content="Price" Grid.RowSpan="2" Foreground="#FFF5EDED" FontFamily="Microsoft Yi Baiti" FontSize="15"/>
+            <Label Width="Auto" Height="Auto" Grid.Column="2" Content="Size/Boost" Grid.RowSpan="2"  Foreground="#FFF5EDED" FontFamily="Microsoft Yi Baiti" FontSize="15"/>
+            <Label Width="Auto" Height="Auto" Grid.Column="3" Content="Delete" Grid.RowSpan="2" Foreground="#FFF5EDED" FontFamily="Microsoft Yi Baiti" FontSize="15" />
+        </Grid>
+        <TabControl HorizontalAlignment="Left" Height="800" VerticalAlignment="Top" Width="760">
+            <TabItem Header="&#xD;&#xA;Drinks" Width="190" FontFamily="Microsoft Yi Baiti" FontSize="29">
+                <Grid Background="#FF738291">
+                    <TabControl HorizontalAlignment="Left" Height="760" VerticalAlignment="Top" Width="815" Margin="0,0,-61,-32">
+                        <TabItem Header="Hot Drinks" FontFamily="Microsoft Yi Baiti" FontSize="20" Margin="0,0,-4,-2" >
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" Margin="0,0,-6,0" PanningMode="Both"  >
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="260"/>
+                                        <RowDefinition Height="260"/>
+                                        <RowDefinition Height="260"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Margin="40,10,47,107">
+                                        <Button Background="Transparent" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="150" Height="150" Click="Coffee_Add">
+                                            <Image Name="coffee" Stretch="Fill" Source="coffee2.jpg" Height="150" Width="150"/>
+                                        </Button>
+                                    </Grid>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Coffee" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto" FontFamily="Microsoft Yi Baiti" />
+                                    <Label Content="our coffee is organic, direct trade, fair trade, and/or rainforest alliance" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="trade, fair trade, and/or" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="rainforest alliance" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="S$1.90 M$2.14 L$2.48" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Tea_Add" Margin="32,10,33,107"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Tea" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto" FontFamily="Microsoft Yi Baiti" />
+                                    <Label Content="your choice of premium" HorizontalAlignment="Left" Margin="32,175,0,0" VerticalAlignment="Top" Height="30" Width="180" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1"/>
+                                    <Label Content="Mighty Leaf Tea" HorizontalAlignment="Left" Margin="32,195,0,0" VerticalAlignment="Top" Height="30" Width="209" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="S$2.38 M$2.62 L$2.96" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1"/>
+                                    <Button Grid.Row="0" Grid.Column="2" Click="Mocha_Add" Margin="32,10,33,107"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Content="Mocha Coffee" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto" FontFamily="Microsoft Yi Baiti" />
+                                    <Label Content="steamed milk with Hershey's" HorizontalAlignment="Left" Margin="31,177,0,0" VerticalAlignment="Top" Height="28" Width="210" FontSize="16" Grid.Column="2"/>
+                                    <Label Content="chocolate and coffee" HorizontalAlignment="Left" Margin="32,190,-1,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="2"/>
+                                    <Label Content="S$2.14 M$2.38 L$2.72" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="2"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Espressos" Margin="3,0,-8,-2" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Latte_Add" Margin="32,10,33,114"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Latte" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="32,136,0,0" FontFamily="Microsoft Yi Baiti" FontSize="32"/>
+                                    <Label Content="espresso and steamed milk" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                  
+                                    <Label Content="S$3.33 M$3.57 L$3.91" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="0"/>
+                                    
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Vanilla_Bean_Add" Margin="32,10,33,114"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Vanilla Bean Latte" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="5,136,0,0" FontFamily="Microsoft Yi Baiti" FontSize="32" Width="250"/>
+                                    <Label Content="espresso, vanilla bean," HorizontalAlignment="Left" Margin="27,165,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="steamed milk" HorizontalAlignment="Left" Margin="27,179,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="S$3.76 M$4.00 L$4.34" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1"/>
+                                    
+                                    <Button Grid.Row="0" Grid.Column="2" Click="Mochanccino_Add" Margin="32,10,33,114"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Content="Mochanccino" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="32,136,0,0" FontFamily="Microsoft Yi Baiti" FontSize="32"/>
+                                    <Label Content="espresso, Hershey's " HorizontalAlignment="Left" Margin="31,165,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="2"/>
+                                    <Label Content="chocolate, steamed milk" HorizontalAlignment="Left" Margin="32,179,-1,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="2"/>
+                                    <Label Content="whip" HorizontalAlignment="Left" Margin="31,193,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="2"/>
+                                    <Label Content="S$3.90 M$4.14 L$4.48" HorizontalAlignment="Left" Margin="10,216,-17,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="2"/>
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Frappes With Coffee" Margin="9,0,-11,-2" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Jamocha_Add" Margin="32,10,33,101"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Ja'Mocha" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="21,148,0,0" FontSize="32"/>
+                                    <Label Content="intense mega-Ghiradelli" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="brand cocoa, with a strong" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="coffee in a creamy base" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $4.85" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Extreme_Toffee_Add" Margin="32,10,33,101"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Extreme Toffee Coffee" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="0,153,0,0" Width="261" FontSize="31"/>
+                                    <Label Content="intense toffee flavour blend" HorizontalAlignment="Left" Margin="21,179,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="with Columbian Supremo" HorizontalAlignment="Left" Margin="21,193,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="coffee and SKOR pieces" HorizontalAlignment="Left" Margin="21,203,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $4.85" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Frappes W/o Coffee" Margin="10,0,-9,-2" FontFamily="Microsoft Yi Baiti" FontSize="20" Background="#FFE5E5E5">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Matcha_Green_Add" Margin="32,10,33,99"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Matcha Green Tea" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,140,0,0" FontSize="32"/>
+                                    <Label Content="Authetic tasting of real" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="grown Japanese matcha" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="greent tea" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $4.85" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Vanilla_Bean_C_Add" Margin="32,10,33,99"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Vanilla Bean" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="21,140,0,0" FontSize="32"/>
+                                    <Label Content="indulge in the true taste of" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="vanilla with real vanilla " HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="bean flavour" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $4.85" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Iced Coffee" Margin="10,0,-24,-2" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Iced_Chocolate_Add" Margin="32,10,33,107"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Iced Chocolate Coffee" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="double shot of espresso" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="over ice with milk and" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="Hershey's chocolate sauce" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $3.95" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Iced_Caramel_Add" Margin="32,10,33,107"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Iced Caramel Coffee" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="double shot of espresso" HorizontalAlignment="Left" Margin="19,174,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="over ice with milk and" HorizontalAlignment="Left" Margin="19,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="Davinci caramel sauce" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $3.95" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1"/>
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Blended Lemonades" Margin="24,0,-19,-2" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Strawberry_Add" Margin="32,10,33,107"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="StrawBerry Lemonade" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="a blend of strawberries, " HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="strawberry puree and" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="lemonade" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $4.10" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Raspberry_Add" Margin="32,10,33,107"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Raspberry Lemonade" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="a blend of berries, " HorizontalAlignment="Left" Margin="21,165,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="raspberry puree and " HorizontalAlignment="Left" Margin="21,179,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="lemonade" HorizontalAlignment="Left" Margin="21,193,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $4.10" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="&#xD;&#xA;Food" Width="190" FontFamily="Microsoft Yi Baiti" FontSize="29">
+                <Grid Background="#FF8B8B8B">
+                    <TabControl  HorizontalAlignment="Left" Height="760" VerticalAlignment="Top" Width="815" Margin="0,0,-6,0">
+                        <TabItem Header="Bagels" Margin="-2,-2,-90,0" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="BLT_Add" Margin="32,10,33,106"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="BTL Bagel" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="bacon, lettuce, tomato" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="mayo, on a toasted" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="bagel" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="$4.52" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Breakfast_Add" Margin="32,10,33,106"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Breakfast Bagel" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="ham, egg, cheddar and" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="tomato on a toasted" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="bagel" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="$4.52" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Wraps" Margin="90,0,-180,-2" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Breakfast_Wrap_Add" Margin="32,10,33,113"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Breakfast Wrap" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="2 eggs, real cheddar" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="salsa, on whole wheat" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="wrap" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="$3.99" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="&#xD;&#xA;Smoothies" Width="190" FontFamily="Microsoft Yi Baiti" FontSize="29">
+                <Grid Background="#FFE5E5E5">
+                    <TabControl  HorizontalAlignment="Left" Height="760" VerticalAlignment="Top" Width="754" Margin="0,0,0,-4">
+                        <TabItem Header="Supreme" FontFamily="Microsoft Yi Baiti" FontSize="20" Margin="-2,-2,-40,0">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Caribbean_Add" Margin="32,10,33,105"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Caribbean Sunrise" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="mangoes, strawberries," HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="orange sorbet, OJ, " HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="strawberry puree and pina" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    
+                                    <Label Content="One-size $5.71" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Dreamscile_Add" Margin="32,10,33,105"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Dreamsicle" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="mangoes, soy milk," HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="orange sorbet, OJ, " HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="peach puree and pina" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                   
+                                    <Label Content="One-size $5.71" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Classic" FontFamily="Microsoft Yi Baiti" FontSize="20" Margin="38,0,-93,-2">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Pina_Add" Margin="32,10,33,105"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Pina Colada Paradise" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="mangoes, bananas," HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="frozen vanilla yogurt, " HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="and pina coloda" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="(pineapple) puree" HorizontalAlignment="Left" Margin="21,212,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $5.48" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Passionate_Add" Margin="32,10,33,105"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Passionate Peach" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="mangoes, bananas," HorizontalAlignment="Left" Margin="31,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="frozen vanilla yogurt, " HorizontalAlignment="Left" Margin="32,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1"/>
+                                    <Label Content="and peach puree" HorizontalAlignment="Left" Margin="31,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $5.48" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Chocolate" FontFamily="Microsoft Yi Baiti" FontSize="20" Margin="92,0,-135,-2">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Chocolate_Banana_Add" Margin="32,10,33,104"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Chocolate Banana Blitz" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="banana, Hershey's chocolate" HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="177" FontSize="16"/>
+                                    <Label Content="sauce, milk, frozen vanilla " HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="yogurt, double fudge" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="frappe mix and protein powder" HorizontalAlignment="Left" Margin="11,212,0,0" VerticalAlignment="Top" Height="28" Width="187" FontSize="16"/>
+                                    <Label Content="One-size $5.95" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Chocolate_Raspberry_Add" Margin="32,10,33,104"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Chocolate Raspberry Rush" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="raspeberries, blueberries," HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="blackberries, Hershey's " HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="chocolate sauce, milk," HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="yogurt, raspberry puree" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $5.95" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Green Tea" FontFamily="Microsoft Yi Baiti" FontSize="20" Margin="135,0,-183,-2">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Tropical_Add" Margin="32,10,33,102"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Tropical Green Tea" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="matcha green tea, mangoes," HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="lemonade, frozen vanilla" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="yogurt, and orange juice" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $5.95" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Strawberry_Green_Add" Margin="32,10,33,102"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Strawberry Green Tea Twister" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="matcha green tea, " HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="strawberries, strawberry" HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="puree, frozen vanilla" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="yogurt" HorizontalAlignment="Left" Margin="21,212,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $5.95" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="1"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Blend Up" Margin="182,0,-253,-2" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Berry_Add" Margin="32,10,33,98"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Berry Explosion" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="mangoes, strawberries," HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="bananas, OJ, apple juice," HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="and mango puree" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $5.71" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Tropical_Tango_Add" Margin="32,10,33,98"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Tropical Tango" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="mangoes, bananas," HorizontalAlignment="Left" Margin="31,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="apple juice, cranberry juice, " HorizontalAlignment="Left" Margin="31,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="mango puree, peach puree," HorizontalAlignment="Left" Margin="32,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1"/>
+                                    <Label Content="and pineapple puree" HorizontalAlignment="Left" Margin="32,212,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1"/>
+                                    <Label Content="One-size $5.71" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1"/>
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="Vegetable " Margin="255,0,-288,-2" FontFamily="Microsoft Yi Baiti" FontSize="20">
+                            <ScrollViewer HorizontalAlignment="Left" Height="732"  VerticalAlignment="Top" Width="750" VerticalScrollBarVisibility="Visible" CanContentScroll="True" PanningMode="Both">
+                                <Grid Height="Auto" Width="730">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+                                        <ColumnDefinition Width="240"/>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="250"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Grid.Row="0" Grid.Column="0" Click="Mango_Add" Margin="32,10,33,108"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Content="Mango Vegetable" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="vegetable puree (carrot," HorizontalAlignment="Left" Margin="21,170,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="celery, beet, parsely)," HorizontalAlignment="Left" Margin="21,184,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="spinach, mangoes, banana" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="OJ, and apple juice" HorizontalAlignment="Left" Margin="21,212,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16"/>
+                                    <Label Content="One-size $6.48" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                    <Button Grid.Row="0" Grid.Column="1" Click="Berry_Veg_Add" Margin="32,10,33,108"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Content="Berry Vegetable" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,140,0,0" FontSize="32" Width="Auto"/>
+                                    <Label Content="vegetable puree (carrot," HorizontalAlignment="Left" Margin="31,165,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="celery, beet, parsely)," HorizontalAlignment="Left" Margin="32,179,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1"/>
+                                    <Label Content="raspberries, blueberries," HorizontalAlignment="Left" Margin="31,193,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="blackberries, banana, OJ" HorizontalAlignment="Left" Margin="32,207,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.ColumnSpan="2" Grid.Column="1"/>
+                                    <Label Content="and cranberry juice" HorizontalAlignment="Left" Margin="31,216,0,0" VerticalAlignment="Top" Height="28" Width="170" FontSize="16" Grid.Column="1"/>
+                                    <Label Content="One-size $6.48" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2" Grid.Column="1"/>
+
+
+
+                                </Grid>
+                            </ScrollViewer>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="&#xD;&#xA;Specials" Width="185" FontFamily="Microsoft Yi Baiti" FontSize="29">
+                <Grid Height="Auto" Width="730">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="240"/>
+                        <ColumnDefinition Width="240"/>
+                        <ColumnDefinition Width="240"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="260"/>
+                        <RowDefinition Height="260"/>
+                        <RowDefinition Height="260"/>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" Click="Special_Add" Margin="32,10,33,107"/>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Candy Cane Coca" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="1,145,0,0" RenderTransformOrigin="0.839,3.942" FontFamily="Microsoft Yi Baiti" FontSize="32"/>
+                    <Label Content="Great Chocolate Favor" HorizontalAlignment="Left" Margin="32,175,0,0" VerticalAlignment="Top" Height="30" Width="180" FontSize="20" Grid.ColumnSpan="2" Grid.Column="0"/>
+                    <Label Content="with Peppermint" HorizontalAlignment="Left" Margin="32,195,0,0" VerticalAlignment="Top" Height="30" Width="209" FontSize="20" Grid.Column="0"/>
+                    <Label Content="S$3.38 M$3.62 L$3.96" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Height="34" Width="225" FontSize="24" Grid.RowSpan="2"  Grid.Column="0"/>
+                </Grid>
+
+            </TabItem>
+
+        </TabControl>
+
+        <Grid HorizontalAlignment="Left" Height="400" Margin="760,90,0,0" VerticalAlignment="Top"  Name="Items_Grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="32"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="31"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="55"/>
+                <ColumnDefinition Width="69"/>
+                <ColumnDefinition Width="45"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Width="Auto" Height="Auto" Grid.Row="0" Grid.Column="0" Name="Item_0" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="22"  />
+
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="0" Grid.Column="1" Name="Price_0" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="25" />
+            <ComboBox Width="Auto" Grid.Row="0" Grid.Column="2" Visibility="Hidden" Name="Boost_0" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="16" >
+                <CheckBox Name="Whey_0" Content="Whey Protein" Checked="Whey_0_Check" Unchecked="Whey_0_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Smart_0" Content="Smart Blend" Checked="Smart_0_Check" Unchecked="Smart_0_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Trim_0" Content="Trim and Fit Blend" Checked="Trim_0_Check" Unchecked="Trim_0_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+            <ComboBox Width="Auto" Grid.Row="0" Grid.Column="2" Visibility="Hidden" Name="Size_0" >
+
+                <RadioButton Content="12oz" Name="Small_0" IsChecked="True"  Unchecked="Small_0_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <RadioButton Content="14oz"  Name="Medium_0" IsChecked="False"  Unchecked="Medium_0_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <RadioButton Content="16oz"  Name="Large_0" IsChecked="False"  Unchecked="Large_0_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+
+            <Button Name="Delete_0" Content="X" Grid.Row="0" Grid.Column="3" Click="Delete_0_Click" Visibility="Hidden" Foreground="#FFF7EFF4" BorderBrush="#FFF7EFF4" Background="#FF1B272E" FontSize="16"/>
+
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="1" Grid.Column="0" Name="Item_Add_0" FontFamily="Microsoft Yi Baiti" FontSize="16"  />
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="0" Name="Item_1" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="22" />
+            <Label Width="Auto" Height="Auto" Grid.Row="2" Grid.Column="1" Name="Price_1" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="25" />
+            <ComboBox Width="Auto" Grid.Row="2" Grid.Column="2" Visibility="Hidden" Name="Boost_1" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="16" >
+                <CheckBox Name="Whey_1" Content="Whey Protein" Checked="Whey_1_Check" Unchecked="Whey_1_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Smart_1" Content="Smart Blend" Checked="Smart_1_Check" Unchecked="Smart_1_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Trim_1" Content="Trim and Fit Blend" Checked="Trim_1_Check" Unchecked="Trim_1_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+            <ComboBox Width="Auto" Grid.Row="2" Grid.Column="2" Visibility="Hidden" Name="Size_1" >
+                <RadioButton Content="12oz" Name="Small_1" IsChecked="True"  Unchecked="Small_1_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18" />
+                <RadioButton Content="14oz"  Name="Medium_1" IsChecked="False"  Unchecked="Medium_1_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <RadioButton Content="16oz"  Name="Large_1" IsChecked="False" Unchecked="Large_1_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+            <Button Name="Delete_1" Content="X" Grid.Row="2" Grid.Column="3" Click="Delete_1_Click" Visibility="Hidden" Foreground="#FFF7EFF4" BorderBrush="#FFF7EFF4" Background="#FF1B272E" FontSize="16"/>
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="3" Grid.Column="0" Name="Item_Add_1"  FontFamily="Microsoft Yi Baiti" FontSize="16" />
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="4" Grid.Column="0" Name="Item_2" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="22" />
+            <Label Width="Auto" Height="Auto" Grid.Row="4" Grid.Column="1" Name="Price_2" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="25" />
+            <ComboBox Width="Auto" Grid.Row="4" Grid.Column="2" Visibility="Hidden" Name="Boost_2" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="16" >
+                <CheckBox Name="Whey_2" Content="Whey Protein" Checked="Whey_2_Check" Unchecked="Whey_2_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Smart_2" Content="Smart Blend" Checked="Smart_2_Check" Unchecked="Smart_2_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Trim_2" Content="Trim and Fit Blend" Checked="Trim_2_Check" Unchecked="Trim_2_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+            <ComboBox Width="Auto" Grid.Row="4" Grid.Column="2" Visibility="Hidden" Name="Size_2" >
+                <RadioButton Content="12oz" Name="Small_2" IsChecked="True"  Unchecked="Small_2_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18" />
+                <RadioButton Content="14oz"  Name="Medium_2" IsChecked="False"  Unchecked="Medium_2_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <RadioButton Content="16oz"  Name="Large_2" IsChecked="False"  Unchecked="Large_2_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+
+            <Button Name="Delete_2" Content="X" Grid.Row="4" Grid.Column="3" Click="Delete_2_Click" Visibility="Hidden" Foreground="#FFF7EFF4" BorderBrush="#FFF7EFF4" Background="#FF1B272E" FontSize="16"/>
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="5" Grid.Column="0" Name="Item_Add_2" FontFamily="Microsoft Yi Baiti" FontSize="16" />
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="6" Grid.Column="0" Name="Item_3" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="22"  />
+            <Label Width="Auto" Height="Auto" Grid.Row="6" Grid.Column="1" Name="Price_3" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="25" />
+            <ComboBox Width="Auto" Grid.Row="6" Grid.Column="2" Visibility="Hidden" Name="Boost_3" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="16" >
+                <CheckBox Name="Whey_3" Content="Whey Protein" Checked="Whey_3_Check" Unchecked="Whey_3_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Smart_3" Content="Smart Blend" Checked="Smart_3_Check" Unchecked="Smart_3_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <CheckBox Name="Trim_3" Content="Trim and Fit Blend" Checked="Trim_3_Check" Unchecked="Trim_3_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+            <ComboBox Width="Auto" Grid.Row="6" Grid.Column="2" Visibility="Hidden" Name="Size_3" >
+                <RadioButton Content="12oz" Name="Small_3" IsChecked="True"  Unchecked="Small_3_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18" />
+                <RadioButton Content="14oz"  Name="Medium_3" IsChecked="False" Unchecked="Medium_3_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+                <RadioButton Content="16oz"  Name="Large_3" IsChecked="False" Unchecked="Large_3_UnCheck" FontFamily="Microsoft Yi Baiti" FontSize="18"/>
+
+            </ComboBox>
+
+
+            <Button Name="Delete_3" Content="X" Grid.Row="6" Grid.Column="3" Click="Delete_3_Click" Visibility="Hidden" Foreground="#FFF7EFF4" BorderBrush="#FFF7EFF4" Background="#FF1B272E" FontSize="16"/>
+
+            <Label Width="Auto" Height="Auto" Grid.Row="7" Grid.Column="0" Name="Item_Add_3" FontFamily="Microsoft Yi Baiti" FontSize="16"  />
+
+
+
+            <Label Width="Auto" Height="Auto" Grid.Row="8" Grid.Column="0" Name="Item_4" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="30"  />
+            <Label Width="Auto" Height="Auto" Grid.Row="8" Grid.Column="1" Name="Price_4" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="25"  />
+            <ComboBox Width="Auto" Grid.Row="8" Grid.Column="2" Visibility="Hidden" Name="Boost_4" Foreground="#FF232121" FontFamily="Microsoft Yi Baiti" FontSize="16" >
+                <CheckBox Name="Whey_4" Content="Whey Protein"/>
+                <CheckBox Name="Smart_4" Content="Smart Blend" />
+                <CheckBox Name="Trim_4" Content="Trim and Fit Blend" />
+
+            </ComboBox>
+            <ComboBox Width="Auto" Grid.Row="8" Grid.Column="2" Visibility="Hidden" Name="Size_4">
+                <RadioButton Content="12oz" Name="Small_4"  />
+                <RadioButton Content="14oz"  Name="Medium_4" />
+                <RadioButton Content="16oz"  Name="Large_4" />
+
+            </ComboBox>
+            <Button Name="Delete_4" Content="X" Grid.Row="8" Grid.Column="3"  Visibility="Hidden" />
+            <Label Width="Auto" Height="Auto" Grid.Row="9" Grid.Column="0" Name="Item_Add_4"  />
+        </Grid>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="810,620,0,0" VerticalAlignment="Top" Width="120" Height="100" Background="{x:Null}" Foreground="#FF1F1E1E" FontFamily="Microsoft Yi Baiti" FontSize="60"/>
+        <Label Content="$" HorizontalAlignment="Left" Margin="935,628,0,0" VerticalAlignment="Top" Width="93" Height="56" Background="{x:Null}" Foreground="#FF1F1E1E" FontFamily="Microsoft Yi Baiti" FontSize="44"/>
+        <Label Name="FinalPrice" Content="0.00" HorizontalAlignment="Left" Margin="959,628,0,0" VerticalAlignment="Top" Foreground="#FF424040" FontFamily="Microsoft Yi Baiti" FontSize="44"/>
+
+
+    </Grid>
+
+
+</UserControl>
